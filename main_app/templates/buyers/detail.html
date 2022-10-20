@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Buyer Details</h1>
+
+<div class="card">
+    <a href="{% url 'buyers_detail' buyer.id %}">
+        <div class="card-content">
+            <span class="card-title">{{ buyer.name }}</span>
+        </div>
+        <div class="card-action">
+            <a href="{% url 'buyers_update' buyer.id %}">Edit</a>
+            <a href="{% url 'buyers_delete' buyer.id %}">Delete</a>
+        </div>
+    </a>
+</div>
+
+{% endblock %}
